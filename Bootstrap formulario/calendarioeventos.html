@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+         body{
+            background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2016/03/10/907198/49e5b4fb9294e2aff145afa985c7ebaa.jpg') ;
+          
+        }
+       .calendar input{
+           text-align: center;
+       }
+       .calandar button{
+           margin-top: 20px;
+           margin-bottom: -30px;
+       }
+       
+    </style>
+
+</head>
+<body>
+
+   
+
+    <div class="root">
+        <div class="calendar" id="calendar">
+        
+
+        </div>
+        <input type="text" id="caja" placeholder="Ingrese Fecha">
+        <button class="text-white btn bg-danger" id="button">Reservar</button>
+    </div>
+
+
+
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <script  type="text/javascript" src="./js/calendar.js"></script>
+    <script type="text/javascript">
+        let calendar = new Calendar('calendar');
+        calendar.getElement().addEventListener('change', e => {
+            console.log(calendar.value().format('LLL'));
+            
+
+        });
+    </script>
+</body>
+</html>
